@@ -20,11 +20,25 @@
     "noEmit": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "types": ["jest"],
+    "types": [
+      "jest"
+    ],
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["./components/*"],
-      "@actions/*": ["./actions/*"]
-    },
+      "@components/*": [
+        "./components/*"
+      ],
+      "@actions/*": [
+        "./actions/*"
+      ]
+    }
   },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
