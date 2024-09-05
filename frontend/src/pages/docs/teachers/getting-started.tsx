@@ -1,6 +1,6 @@
 import React from 'react'
 
-import markdown from '../../../docs/teachers/getting-started'
+import markdown from '../../../docs/teachers/getting-started.md'
 import { prepareMarkdown } from '../../../utils/docs'
 
 import MarkdownDocs, { getMarkdownDocsLayout } from '../../../components/Docs/MarkdownDocs'
