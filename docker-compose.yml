@@ -1,0 +1,30 @@
+services:
+  backend:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+    # volumes:
+    #   - ./api:/root
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    # volumes:
+    #   - ./frontend:/app
+
+  mariadb:
+    container_name: spotlight-db
+    image: mariadb:latest
+    volumes:
+      - spotlight-mysql-data:/var/lib/mysql
+    environment:
+      - MARIADB_ROOT_PASSWORD=secret
+      - MARIADB_DATABASE=spotlight
+
+volumes:
+  spotlight-mysql-data:
