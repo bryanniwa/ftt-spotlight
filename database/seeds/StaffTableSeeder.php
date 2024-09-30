@@ -16,10 +16,10 @@ class StaffTableSeeder extends Seeder
             'staff_type' => 'administrator',
             'administrator' => true,
             'title' => 'Mr.',
-            'first_name' => 'Curtis',
-            'last_name' => 'Upshall',
-            'initials' => 'CU',
-            'email' => 'curtisupshall@gmail.com'
+            'first_name' => 'Bryan',
+            'last_name' => 'Niwa',
+            'initials' => 'BN',
+            'email' => 'thebryanniwa@gmail.com'
         ]);
     }
 }
