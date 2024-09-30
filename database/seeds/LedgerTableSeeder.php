@@ -32,7 +32,7 @@ class LedgerTableSeeder extends Seeder
                             $date = date('Y-m-d', $time);
                             $params = [
                                 'date' => $date,
-                                'time' => $block_time,
+                                'checked_in_at' => date('Y-m-d H:i:s', $time),
                                 'block_id' => $block->id,
                                 'staff_id' => $staff->id,
                                 'student_id' => $student->id,
