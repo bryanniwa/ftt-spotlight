@@ -118,6 +118,7 @@ Route::middleware(['auth:api', 'expired-password', 'scope:teacher,admin,sysadmin
 
     // Staff
     Route::post('staff', 'StaffController@create');
+    Route::post('staff/upload', 'StaffController@upload');
 
     // Students
     Route::get('students', 'StudentsController@index');
