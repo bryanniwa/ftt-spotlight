@@ -19,7 +19,6 @@ class StudentsTableSeeder extends Seeder
             $blocks->each(function($block) use ($student, $staff_ids) {
                 $course = $block->courses()->get()->random(1)->first();
                 $staff_id = $staff_ids->random(1)->first();
-                $course->enrollStudents($student->id, $staff_id);
             });
         });
     }
