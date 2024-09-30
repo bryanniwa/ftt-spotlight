@@ -5,6 +5,7 @@ namespace App\Imports;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
 use App\Staff;
+use App\Http\Utils;
 
 class StaffImport implements ToModel, WithHeadingRow
 {
@@ -19,7 +20,8 @@ class StaffImport implements ToModel, WithHeadingRow
             'first_name' => $first_name,
             'last_name'  => $last_name,
             'initials' => substr($first_name, 0, 1). substr($last_name, 0, 1),
-            'administrator' => false
+            'administrator' => false,
+            'color' => Utils::topicColor()
         ]);
     }
 }

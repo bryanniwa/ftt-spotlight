@@ -108,4 +108,16 @@ class StaffController extends Controller
         $staff->setCapacity($capacity);
         return new StaffResource($staff);
     }
+
+    public function upload(Request $request)
+    {
+        $verification_response = $this->verify($request);
+        if ($verification_response->status() === 200) {
+            $file_path = $request->file('file')->store('staff-uploads');
+
+            return $file_path;
+        } else {
+            return $verification_response;
+        }
+    }
 }
